@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    /* Make 1rem = 10px */
+    font-size: 62.5%; 
+}
+
+.header {
+    background-color: #ccc;
+    padding: 5rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro {
+    font-size: 8rem;
+    font-weight: 300;
+    color: blue;
+    text-align: center;
+}
