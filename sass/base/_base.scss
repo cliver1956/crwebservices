@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+ /* Sets root font-size to 10px assuming browser default is 16px Therefor defines 1rem as 10px */
+    font-size: 62.5%; //1rem = 10px
+
+    @include respond(tab-land) { //width <= 1200px
+        font-size: 56.25%; //1rem now = 9px
+    }
+
+    @include respond(tab-port) { //width <= 900px
+        font-size: 50%;  // 1rem now = 8px
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%; // 1rem now = 12px
+    }
+
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab-port) { 
+        padding: 0;  
+    }
+}
+
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
