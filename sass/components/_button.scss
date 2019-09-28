@@ -50,6 +50,15 @@
             }
     }
 
+    &--blue {
+        background-color: $color-tertiary-light;
+        color: $color-white;
+
+            &::after {
+                background-color: $color-primary;
+            }
+    }
+
     &::after {
         content: "";
         display: inline-block;
