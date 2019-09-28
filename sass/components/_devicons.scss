@@ -14,7 +14,6 @@
 
 .devicons {
 	font-family: 'devicons';
-	font-size: 10rem;
 	color: $color-tertiary-light;
 	speak: none;
 	font-style: normal;
@@ -26,6 +25,18 @@
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
+	&__small {
+		font-size: 2rem;
+	}
+
+	&__med {
+		font-size: 5rem;
+	}
+	&__lge {
+		font-size: 10rem;
+	}
+
 }
 
 $devicons:	(git "\e602"),

@@ -448,7 +448,6 @@ body {
 
 .devicons {
   font-family: 'devicons';
-  font-size: 10rem;
   color: #2c94ea;
   speak: none;
   font-style: normal;
@@ -459,6 +458,12 @@ body {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+  .devicons__small {
+    font-size: 2rem; }
+  .devicons__med {
+    font-size: 5rem; }
+  .devicons__lge {
+    font-size: 10rem; }
 
 .devicons-git:before {
   content: ""; }
@@ -1582,19 +1587,19 @@ body {
     .section-about {
       padding: 20rem 0; } }
 
-.section-features {
+.section-services {
   padding: 20rem 0;
   margin-top: -12rem;
   background-image: linear-gradient(to right bottom, rgba(44, 148, 234, 0.8), rgba(0, 32, 163, 0.8)), url(../img/codescreen.jpg);
   background-size: cover;
   transform: skewY(-7deg); }
-  .section-features > * {
+  .section-services > * {
     transform: skewY(7deg); }
   @media only screen and (max-width: 56.25em) {
-    .section-features {
+    .section-services {
       padding: 10rem 0; } }
   @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
-    .section-features {
+    .section-services {
       background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg); } }
 
 .section-tours {
