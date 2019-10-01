@@ -8,13 +8,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <script src='https://www.google.com/recaptcha/api.js' async defer ></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <!-- Stylesheets for Development -->
     <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.comp.css">
     <!-- Stylesheet for Build -->
     <!-- <link rel="stylesheet" href="css/style.min.css"> -->
-    <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png"> -->
     <title>CR Web Services</title>
 </head>
 <body>
@@ -330,24 +330,39 @@
 
         <section class="section-contact">
             <div class="row">
-                <div class="contact">
+                <div class="contact" id="contact">
                     <div class="contact__form">
-                        <form action="scripts/sendmail.php" method="POST" class="form">
+                        <form action="scripts/formmail.php" method="POST" class="form" name="contactform">
                             <div class="u-margin-bottom-medium">
                                 <h2 class="heading-secondary">
-                                    Message for details
+                                    Email
                                 </h2>
                             </div>
+                            <!-- Hidden fields -->
+                            <!-- <input type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT,AUTH_TYPE,REMOTE_USER" /> -->
+                            <input type="hidden" name="recipients" value="clive*AT*crwebservices.co.uk" />
+                            <input type="hidden" name="required" value="email:Your email address,realname:Your name,message:Your message" />
+                            <input type="hidden" name="derive_fields" value="imgverify=g-recaptcha-response" />
+                            <input type="hidden" name="good_url" value="../formsuccess.html" />
+                            <input type="hidden" name="bad_url" value="../formfail.html" />
+                            <input type="hidden" name="subject" value="CR Web Services Enquiry" />
+                            <!-- <input type="hidden" name="derive_fields" value="email=EmailAddr,realname=FullName" /> -->
+                            <!-- <input type="hidden" name="mail_options" value="Exclude=email;realname" /> -->
+                            <!-- End hidden fields -->
                             <div class="form__group">
-                                <input type="text" class="form__input" placeholder="Full Name" id="name" required>
-                                <label for="name" class="form__label">Full Name</label>
+                                <input type="text" class="form__input" placeholder="Your Name" id="realname" name="realname" required>
+                                <label for="realname" class="form__label">Your Name</label>
                             </div>
                             <div class="form__group">
-                                <input type="email" class="form__input" placeholder="Email address" id="email" required>
+                                <input type="email" class="form__input" placeholder="Email address" id="email" name="email" required>
                                 <label for="email" class="form__label">Email address</label>
                             </div>
-                            <div class="form__group u-margin-bottom-medium">
-                                <textarea class="form__input" placeholder="Your Message" id="message" maxlength="100" required></textarea>
+                            <div class="form__group">
+                                <input type="text" class="form__input" placeholder="Phone number" id="phone" name="phone" required>
+                                <label for="phone" class="form__label">Your phone number</label>
+                            </div>
+                            <div class="form__group">
+                                <textarea class="form__input" placeholder="Your Message" id="message" maxlength="100" name="message" required></textarea>
                                 <label for="message" class="form__label">Your Message</label>
 <!--                                 <div class="form__radio-group">
                                     <input type="radio" class="form__radio-input" id="small" name="size">
@@ -364,6 +379,7 @@
                                     </label>
                                 </div> -->
                             </div>
+                            <div class="g-recaptcha form__group  u-margin-bottom-medium" data-sitekey="6LfhH1kUAAAAAJRTi2LmNuwNIbK82RRd6jeKFRxL"></div>
                             <div class="form__group">
                                 <button class="btn btn--blue">Send &rarr;</button>
                             </div>
