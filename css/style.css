@@ -1588,7 +1588,7 @@ body {
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
-  margin-top: -20vh; }
+  margin-top: -30vh; }
   @media only screen and (max-width: 56.25em) {
     .section-about {
       padding: 20rem 0; } }
@@ -1599,6 +1599,12 @@ body {
   background-image: linear-gradient(to right bottom, rgba(44, 148, 234, 0.8), rgba(0, 32, 163, 0.8)), url(../img/codescreen.jpg);
   background-size: cover;
   transform: skewY(-7deg); }
+  .section-services__heading {
+    padding: 3rem;
+    text-align: center;
+    margin-top: -12rem; }
+  .section-services__heading > h2 {
+    color: #333; }
   .section-services > * {
     transform: skewY(7deg); }
   @media only screen and (max-width: 56.25em) {

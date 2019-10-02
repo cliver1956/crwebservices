@@ -497,7 +497,7 @@ $LOGDIR = ""; /* directory for log files; empty string to disallow log files */
 $AUTORESPONDLOG = ""; /* file name in $LOGDIR for the auto responder log; empty string for no auto responder log */
 
 /* Help: http://www.tectite.com/fmdoc/csv_file_settings.php */
-$CSVDIR    = ""; /* directory for csv files; empty string to disallow csv files */
+$CSVDIR    = "../../crwsformdata"; /* directory for csv files; empty string to disallow csv files */
 $CSVSEP    = ","; /* comma separator between fields (columns) */
 $CSVINTSEP = ";"; /* semicolon is the separator for fields (columns) with multiple values (checkboxes, etc.) */
 $CSVQUOTE  = '"'; /* all fields in the CSV are quoted with this character; default is double quote.  You can change it to single quote or leave it empty for no quotes. */
@@ -551,7 +551,7 @@ $AUTH_USER = "";
 $AUTH_PW   = "";
 
 /* Help: http://www.tectite.com/fmdoc/form_ini_file.php */
-$FORM_INI_FILE = "";
+$FORM_INI_FILE = "../../crwsmailform.ini";
 
 /* Help: http://www.tectite.com/fmdoc/moduledir.php */
 $MODULEDIR = ".";

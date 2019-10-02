@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <!-- Stylesheets for Development -->
     <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
-    <link rel="stylesheet" href="css/style.comp.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Stylesheet for Build -->
     <!-- <link rel="stylesheet" href="css/style.min.css"> -->
     <title>CR Web Services</title>
@@ -80,6 +80,12 @@
         </section>
 
         <section class="section-services" id="section-services" >
+            <div class="section-services__heading">
+                <h2 class="heading-secondary">
+                    Technologies
+                </h2>
+            </div>    
+
             <div class="row">
                 <div class="col-1-of-4">
                     <div class="feature-box">
@@ -335,14 +341,14 @@
                         <form action="scripts/formmail.php" method="POST" class="form" name="contactform">
                             <div class="u-margin-bottom-medium">
                                 <h2 class="heading-secondary">
-                                    Email
+                                    Email us:
                                 </h2>
                             </div>
                             <!-- Hidden fields -->
-                            <!-- <input type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT,AUTH_TYPE,REMOTE_USER" /> -->
-                            <input type="hidden" name="recipients" value="clive*AT*crwebservices.co.uk" />
+                            <input type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT,AUTH_TYPE,REMOTE_USER" />
+                            <input type="hidden" name="recipients" value="clive" />
                             <input type="hidden" name="required" value="email:Your email address,realname:Your name,message:Your message" />
-                            <input type="hidden" name="derive_fields" value="imgverify=g-recaptcha-response" />
+                            <input type="hidden" name="derive_fields" value="imgverify=g-recaptcha-response, Date = %date%, Time = %time%" />
                             <input type="hidden" name="good_url" value="../formsuccess.html" />
                             <input type="hidden" name="bad_url" value="../formfail.html" />
                             <input type="hidden" name="subject" value="CR Web Services Enquiry" />
@@ -384,6 +390,15 @@
                                 <button class="btn btn--blue">Send &rarr;</button>
                             </div>
                         </form>
+<!--                         <div class="u-margin-bottom-small">
+                            <h2 class="heading-tertiary">
+                                Or call us:
+                            </h2>
+                            <ul>
+                                <li>Phone: 01767 261722</li>
+                                <li>Mob: 07958877440</li>
+                            </ul>
+                        </div> -->
                     </div>
                 </div>
             </div>
